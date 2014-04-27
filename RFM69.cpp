@@ -153,7 +153,7 @@ bool RFM69::canSend()
     setMode(RF69_MODE_STANDBY);
     return true;
   }
-  return false;
+  return true; //disable checking for free channel. 
 }
 
 void RFM69::send(byte toAddress, const void* buffer, byte bufferSize, bool requestACK)
